@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1w^3m+$nvb-p^+3id#olz82syw)u363a3*6s_4fe8m2xs#4hob
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['alsumary0.pythonanywhere.com']
 
 
 # Application definition
@@ -141,3 +141,8 @@ EMAIL_USE_SSL = True
 EMAIL_PORT = 465
 EMAIL_HOST_USER = "hubnews000@gmail.com"
 EMAIL_HOST_PASSWORD = "ivitwbkqzpfntdcv"
+
+try:
+    from .local_settings import *t
+except ImportError:
+    print("Looks like no local file. You must be on production")
